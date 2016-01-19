@@ -107,7 +107,7 @@ class FormBuilder
     // actual method since forms don't support the reserved methods in HTML.
     $attributes['method'] = $this->getMethod($method);
 
-      $attributes['action'] = $this->getAction($options);
+      $attributes['action'] = \MyUrl::originalUrl($this->getAction($options));
 
       $attributes['accept-charset'] = 'UTF-8';
 
